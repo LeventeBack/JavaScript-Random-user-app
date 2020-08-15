@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Company</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="home">
+        <h1>Create your own bussiness team</h1>
+    </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#view-team">View team</a></li>
+            <li><a href="#manage-team">Manage team</a></li>
+        </ul>            
+    </nav>
+    <main>
+        <div id="view-team">
+            <h2>Boss</h2>
+            <div class="leaders" data-boss-container>
+                 <!--<div class="person" data-ceo>
+                    <h3>Chief Executive Officer (CEO)</h3>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+                    <div class="details">
+                        <span>Name: <span data-name>Mr Noah Vieria</span></span>
+                        <span>Birth date: <span data-birthday>1950-09-02</span></span>
+                        <span>Gender: <span data-gender>male</span></span>
+                        <span>Email: <span data-email>vladimir.blanc@example.com</span></span>
+                        <span>Telephone: <span data-phone>012-234-4564</span></span>
+                        <button class="fire-btn" data-fire-btn>Fire</button>
+                    </div>
+                </div>
+               <div class="person" data-cmo>
+                    <h3>Chief Marketing Officer (CMO)</h3>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+                    <div class="details">
+                        <span>Name: <span data-name>Mr Noah Vieria</span></span>
+                        <span>Birth date: <span data-birthday>1950-09-02</span></span>
+                        <span>Gender: <span data-gender>male</span></span>
+                        <span>Email: <span data-email>vladimir.blanc@example.com</span></span>
+                        <span>Telephone: <span data-phone>012-234-4564</span></span>
+                        <button class="fire-btn" data-fire-btn>Fire</button>
+                    </div>
+                </div>
+                 <div class="person" data-coo>
+                    <h3>Chief Operating Officer (COO)</h3>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+                    <div class="details">
+                        <span>Name: <span data-name>Mr Noah Vieria</span></span>
+                        <span>Birth date: <span data-birthday>1950-09-02</span></span>
+                        <span>Gender: <span data-gender>male</span></span>
+                        <span>Email: <span data-email>vladimir.blanc@example.com</span></span>
+                        <span>Telephone: <span data-phone>012-234-4564</span></span>
+                        <button class="fire-btn" data-fire-btn>Fire</button>
+                    </div>
+                </div>
+                <div class="person" data-cfo>
+                    <h3>Chief Financial Officer (CFO)</h3>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+                    <div class="details">
+                        <span>Name: <span data-name>Mr Noah Vieria</span></span>
+                        <span>Birth date: <span data-birthday>1950-09-02</span></span>
+                        <span>Gender: <span data-gender>male</span></span>
+                        <span>Email: <span data-email>vladimir.blanc@example.com</span></span>
+                        <span>Telephone: <span data-phone>012-234-4564</span></span>
+                        <button class="fire-btn" data-fire-btn>Fire</button>
+                    </div>
+                </div>
+                
+                <div class="person" data-cto>
+                    <h3>Chief Technology Officer (CTO)</h3>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+                    <div class="details">
+                        <span>Name: <span data-name>Mr Noah Vieria</span></span>
+                        <span>Birth date: <span data-birthday>1950-09-02</span></span>
+                        <span>Gender: <span data-gender>male</span></span>
+                        <span>Email: <span data-email>vladimir.blanc@example.com</span></span>
+                        <span>Telephone: <span data-phone>012-234-4564</span></span>
+                        <button class="fire-btn" data-fire-btn>Fire</button>
+                    </div>
+                </div> 
+                <div class="person" data-cfo>
+                    <h3>Chief Information Officer (CIO) </h3>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg">
+                    <div class="details">
+                        <span>Name: <span data-name>Mr Noah Vieria</span></span>
+                        <span>Birth date: <span data-birthday>1950-09-02</span></span>
+                        <span>Gender: <span data-gender>male</span></span>
+                        <span>Email: <span data-email>vladimir.blanc@example.com</span></span>
+                        <span>Telephone: <span data-phone>012-234-4564</span></span>
+                        <button class="fire-btn">Fire</button>
+                    </div>
+                </div>        -->
+            </div>
+            <h2>Employees</h2>
+            <div class="employees" data-employee-container>
+            </div>
+        </div>
+            <h2>HIRE NEW PERSON</h2>
+        <div id="manage-team" class="candidats" data-new-users-container>
+        </div>
+
+      
+    </main>
+
+    <template id="details-template">
+        <section class="details">
+            <span>Name: <span data-name></span></span>
+            <span>Birth date: <span data-birthday></span></span>
+            <span>Gender: <span data-gender></span></span>
+            <span>Email: <span data-email></span></span>
+            <span>Telephone: <span data-phone></span></span>
+        </section>
+    </template>
+
+    <template id="form-template">
+        <form class="hire-form" data-new-user-form>
+            <select name="newMember" id="hiring">                
+                <option selected disabled hidden>Hire as:</option>
+                <option value="employee">Employee</option>
+                <option value="ceo">CEO</option>
+                <!-- <option value="coo">COO</option>
+                <option value="cfo">CFO</option>
+                <option value="cmo">CMO</option>
+                <option value="cto">CTO</option>
+                <option value="cio">CIO</option> -->
+            </select>    
+            <button type="submit">Hire</button>      
+        </form>
+    </template>
+
+</body>
+</html>
